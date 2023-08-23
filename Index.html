@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Bootcamp</title>
+</head>
+<body>
+  <style>
+    body{
+      border-radius: 5px;
+    }
+    .card{
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: auto;
+    border-radius: 18px;
+   
+}
+#baseCurrency, #Currency{
+    background: transparent;
+    border:0;
+    border-bottom: 1px solid black;
+    
+}
+
+    #btn{
+      width:100%;  
+      color: white;
+      border-radius: 5px;
+      background-color: #9872fe;
+      border: 0;
+      padding: 2px;
+      font-weight: 700;
+    }
+    #btn :hover{
+      background-color: #9872f9;
+    }
+    #btn :active{
+      background-color: #9872fe;
+    }
+    p{
+      background-color: beige;
+      font-weight: 600;
+      padding: 10px;
+      width: 100%;
+    }
+    #amount{
+      border: 0;
+      border-bottom: 1px solid #141719;
+      outline: 0;
+    }
+    span{
+      margin: 5px;
+    }
+    select, option{
+      background-color: #9872fe;
+    }
+    option{
+      color: white;
+    }
+  </style>
+    <div class="overlay"></div>
+    <div class="card">
+      <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill='#9872fe' fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 2c5.519 0 10 4.481 10 10s-4.481 10-10 10-10-4.481-10-10 4.481-10 10-10zm2 12v-3l5 4-5 4v-3h-9v-2h9zm-4-6v-3l-5 4 5 4v-3h9v-2h-9z"/></svg>
+      <h2>Convert Currencies</h2>
+        <input style="text-align: center;" type="number" name="amount" id="amount" value="100" placeholder="amounts">
+        <div style="display: flex; padding: 5%; align-items: center; justify-content: space-between;">
+          <select class="select" name="baseCurrency" id="baseCurrency" >
+          </select>
+          <span style="margin-left: 3px; font-size: smaller; font-weight: bold ; color: #9872fe;" >To</span><select class="select" name="Currency" id="Currency" >
+          </select>
+        </div>
+        <input  id="btn" type="button" value="Convert">
+        <p data-result>Result: </p>
+    </div>
+    <script src="currencies.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
